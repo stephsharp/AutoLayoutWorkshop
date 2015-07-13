@@ -122,8 +122,7 @@
                                             <constraint firstItem="9bK-iI-XDT" firstAttribute="leading" secondItem="ZWs-Hk-mE4" secondAttribute="leading" id="CWd-nJ-BCP"/>
                                             <constraint firstItem="ZWs-Hk-mE4" firstAttribute="leading" secondItem="oea-Ud-NwO" secondAttribute="leading" id="Hbx-Jh-VhX"/>
                                             <constraint firstItem="ZWs-Hk-mE4" firstAttribute="leading" secondItem="Qbb-db-DCy" secondAttribute="leading" constant="12" id="KLq-7E-jeY"/>
-                                            <constraint firstItem="9bK-iI-XDT" firstAttribute="top" secondItem="oea-Ud-NwO" secondAttribute="bottom" constant="8" id="Kgg-a1-XWI"/>
-                                            <constraint firstAttribute="bottom" secondItem="9bK-iI-XDT" secondAttribute="bottom" id="PKD-46-u59"/>
+                                            <constraint firstItem="9bK-iI-XDT" firstAttribute="top" secondItem="oea-Ud-NwO" secondAttribute="bottom" constant="8" symbolic="YES" id="Kgg-a1-XWI"/>
                                             <constraint firstAttribute="trailing" secondItem="9bK-iI-XDT" secondAttribute="trailing" id="Xk9-zn-tpO"/>
                                             <constraint firstItem="oea-Ud-NwO" firstAttribute="top" secondItem="ZWs-Hk-mE4" secondAttribute="bottom" id="lgG-8E-rGO"/>
                                         </constraints>
@@ -276,8 +275,8 @@
                             <constraint firstItem="0cD-bJ-CUP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="flc-2a-V3C"/>
                             <constraint firstItem="a5I-jz-cWG" firstAttribute="top" secondItem="zVl-Tk-Fkv" secondAttribute="top" constant="2" id="g46-j0-Gb0"/>
                             <constraint firstItem="3GV-py-Hvr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lmt-yu-LbL"/>
-                            <constraint firstItem="3GV-py-Hvr" firstAttribute="top" secondItem="zVl-Tk-Fkv" secondAttribute="bottom" constant="8" id="p58-sP-g4O"/>
-                            <constraint firstItem="zVl-Tk-Fkv" firstAttribute="top" secondItem="tG5-Qo-Tez" secondAttribute="bottom" constant="8" id="qJC-Wx-WUr"/>
+                            <constraint firstItem="3GV-py-Hvr" firstAttribute="top" secondItem="zVl-Tk-Fkv" secondAttribute="bottom" constant="8" symbolic="YES" id="p58-sP-g4O"/>
+                            <constraint firstItem="zVl-Tk-Fkv" firstAttribute="top" secondItem="tG5-Qo-Tez" secondAttribute="bottom" constant="8" symbolic="YES" id="qJC-Wx-WUr"/>
                             <constraint firstItem="WdW-mx-VmH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rdM-1M-PWx"/>
                             <constraint firstItem="vwa-jY-imk" firstAttribute="leading" secondItem="kdd-rK-0jL" secondAttribute="trailing" constant="8" symbolic="YES" id="uJz-2U-ofA"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="mAb-ZO-NET" secondAttribute="trailing" id="uvN-lP-Rzt"/>
@@ -544,91 +543,77 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LK-mn-cSl" userLabel="Overlay View">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="jDp-Vb-Yyg" userLabel="Camera frame container">
+                                <rect key="frame" x="0.0" y="108" width="600" height="402"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="jDp-Vb-Yyg" userLabel="Camera Frame Container">
-                                        <rect key="frame" x="0.0" y="44" width="600" height="402"/>
-                                        <subviews>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szs-DB-XJX" customClass="CameraFrameView">
-                                                <rect key="frame" x="109" y="10" width="382" height="382"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Szs-DB-XJX" secondAttribute="height" multiplier="1:1" id="tTX-Bb-fNf"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="colour">
-                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                                        <real key="value" value="2.5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="margin">
-                                                        <real key="value" value="11"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shortEdgeLength">
-                                                        <real key="value" value="16"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szs-DB-XJX" customClass="CameraFrameView">
+                                        <rect key="frame" x="109" y="10" width="382" height="382"/>
                                         <constraints>
-                                            <constraint firstItem="Szs-DB-XJX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jDp-Vb-Yyg" secondAttribute="top" id="FTz-lz-l1f"/>
-                                            <constraint firstItem="Szs-DB-XJX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jDp-Vb-Yyg" secondAttribute="leading" constant="10" id="Hye-By-NTc"/>
-                                            <constraint firstItem="Szs-DB-XJX" firstAttribute="top" secondItem="jDp-Vb-Yyg" secondAttribute="top" priority="750" constant="10" id="KyJ-aa-RKa"/>
-                                            <constraint firstAttribute="bottom" secondItem="Szs-DB-XJX" secondAttribute="bottom" priority="750" constant="10" id="L5M-vO-V1O"/>
-                                            <constraint firstAttribute="centerX" secondItem="Szs-DB-XJX" secondAttribute="centerX" id="MTc-iq-jla"/>
-                                            <constraint firstAttribute="centerY" secondItem="Szs-DB-XJX" secondAttribute="centerY" id="Qs3-Bn-QLO"/>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Szs-DB-XJX" secondAttribute="bottom" id="XBV-xa-OMi"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Szs-DB-XJX" secondAttribute="trailing" constant="10" id="bxz-b0-rEO"/>
+                                            <constraint firstAttribute="width" secondItem="Szs-DB-XJX" secondAttribute="height" multiplier="1:1" id="tTX-Bb-fNf"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="colour">
+                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                <real key="value" value="2.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="margin">
+                                                <real key="value" value="11"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shortEdgeLength">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YPX-pB-VWc">
-                                        <rect key="frame" x="0.0" y="446" width="600" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="90" id="vXb-ii-vdz"/>
-                                        </constraints>
-                                        <items>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="NOv-Pl-C38"/>
-                                            <barButtonItem image="takephoto" style="plain" id="37r-23-kec">
-                                                <connections>
-                                                    <segue destination="hsH-bp-te9" kind="unwind" unwindAction="unwindToProfile:" id="CXD-GJ-iB4"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="fm9-3f-qje"/>
-                                        </items>
-                                    </toolbar>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nKG-dR-A4l">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <items>
-                                            <barButtonItem title="Flash" id="0H2-bq-5o7"/>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="ngn-4m-ILa"/>
-                                            <barButtonItem title="Timer" id="a1j-BP-D5H"/>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="KRb-mi-g9K"/>
-                                            <barButtonItem title="Filters" id="MzT-Mh-q40"/>
-                                        </items>
-                                    </toolbar>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="YPX-pB-VWc" secondAttribute="bottom" id="6sN-J0-dBD"/>
-                                    <constraint firstItem="YPX-pB-VWc" firstAttribute="leading" secondItem="3LK-mn-cSl" secondAttribute="leading" id="CAr-9e-QRk"/>
-                                    <constraint firstItem="jDp-Vb-Yyg" firstAttribute="top" secondItem="nKG-dR-A4l" secondAttribute="bottom" symbolic="YES" id="CYR-pz-snb"/>
-                                    <constraint firstItem="YPX-pB-VWc" firstAttribute="top" secondItem="jDp-Vb-Yyg" secondAttribute="bottom" id="HCY-8u-hU0"/>
-                                    <constraint firstItem="nKG-dR-A4l" firstAttribute="leading" secondItem="3LK-mn-cSl" secondAttribute="leading" id="Ydr-wa-LBC"/>
-                                    <constraint firstItem="nKG-dR-A4l" firstAttribute="top" secondItem="3LK-mn-cSl" secondAttribute="top" id="ZGH-qz-FlU"/>
-                                    <constraint firstAttribute="trailing" secondItem="YPX-pB-VWc" secondAttribute="trailing" id="aWR-Yd-hgB"/>
-                                    <constraint firstAttribute="trailing" secondItem="nKG-dR-A4l" secondAttribute="trailing" id="ekX-Gp-aZ2"/>
-                                    <constraint firstAttribute="trailing" secondItem="jDp-Vb-Yyg" secondAttribute="trailing" id="oX9-ey-Rei"/>
-                                    <constraint firstItem="jDp-Vb-Yyg" firstAttribute="leading" secondItem="3LK-mn-cSl" secondAttribute="leading" id="rfD-hE-0EF"/>
+                                    <constraint firstItem="Szs-DB-XJX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jDp-Vb-Yyg" secondAttribute="leading" constant="10" id="Hye-By-NTc"/>
+                                    <constraint firstItem="Szs-DB-XJX" firstAttribute="top" secondItem="jDp-Vb-Yyg" secondAttribute="top" priority="750" constant="10" id="KyJ-aa-RKa"/>
+                                    <constraint firstAttribute="bottom" secondItem="Szs-DB-XJX" secondAttribute="bottom" priority="750" constant="10" id="L5M-vO-V1O"/>
+                                    <constraint firstAttribute="centerX" secondItem="Szs-DB-XJX" secondAttribute="centerX" id="MTc-iq-jla"/>
+                                    <constraint firstAttribute="centerY" secondItem="Szs-DB-XJX" secondAttribute="centerY" id="Qs3-Bn-QLO"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Szs-DB-XJX" secondAttribute="trailing" constant="10" id="bxz-b0-rEO"/>
                                 </constraints>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YPX-pB-VWc" userLabel="Bottom toolbar">
+                                <rect key="frame" x="0.0" y="510" width="600" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="vXb-ii-vdz"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NOv-Pl-C38"/>
+                                    <barButtonItem image="takephoto" style="plain" id="37r-23-kec">
+                                        <connections>
+                                            <segue destination="hsH-bp-te9" kind="unwind" unwindAction="unwindToProfile:" id="CXD-GJ-iB4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fm9-3f-qje"/>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nKG-dR-A4l" userLabel="Top toolbar">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Flash" id="0H2-bq-5o7"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ngn-4m-ILa"/>
+                                    <barButtonItem title="Timer" id="a1j-BP-D5H"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KRb-mi-g9K"/>
+                                    <barButtonItem title="Filters" id="MzT-Mh-q40"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="3LK-mn-cSl" secondAttribute="trailing" id="B1E-ZM-afZ"/>
-                            <constraint firstItem="MF9-NK-K8b" firstAttribute="top" secondItem="3LK-mn-cSl" secondAttribute="bottom" id="Jyo-YE-Ekd"/>
-                            <constraint firstItem="3LK-mn-cSl" firstAttribute="leading" secondItem="obO-As-SiE" secondAttribute="leading" id="VvN-Cc-ksw"/>
-                            <constraint firstItem="3LK-mn-cSl" firstAttribute="top" secondItem="cS5-8l-AEK" secondAttribute="bottom" id="sOZ-Wo-95S"/>
+                            <constraint firstItem="jDp-Vb-Yyg" firstAttribute="top" secondItem="nKG-dR-A4l" secondAttribute="bottom" id="1KM-V8-OPk"/>
+                            <constraint firstItem="nKG-dR-A4l" firstAttribute="leading" secondItem="obO-As-SiE" secondAttribute="leading" id="CCu-iX-CNY"/>
+                            <constraint firstItem="YPX-pB-VWc" firstAttribute="leading" secondItem="obO-As-SiE" secondAttribute="leading" id="Fog-3u-BZ2"/>
+                            <constraint firstAttribute="trailing" secondItem="YPX-pB-VWc" secondAttribute="trailing" id="L6r-1G-NpO"/>
+                            <constraint firstItem="nKG-dR-A4l" firstAttribute="top" secondItem="cS5-8l-AEK" secondAttribute="bottom" id="OUl-lG-wU3"/>
+                            <constraint firstItem="jDp-Vb-Yyg" firstAttribute="leading" secondItem="obO-As-SiE" secondAttribute="leading" id="Otk-oo-aq3"/>
+                            <constraint firstItem="MF9-NK-K8b" firstAttribute="top" secondItem="YPX-pB-VWc" secondAttribute="bottom" id="rbE-mW-4RJ"/>
+                            <constraint firstAttribute="trailing" secondItem="nKG-dR-A4l" secondAttribute="trailing" id="rny-lt-SIb"/>
+                            <constraint firstItem="YPX-pB-VWc" firstAttribute="top" secondItem="jDp-Vb-Yyg" secondAttribute="bottom" id="sBl-y9-A5W"/>
+                            <constraint firstAttribute="trailing" secondItem="jDp-Vb-Yyg" secondAttribute="trailing" id="vWY-MI-TMo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Take Photo" id="ReA-GA-HWb">
