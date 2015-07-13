@@ -36,12 +36,9 @@
     [alertController addAction:recentPhotoAction];
     [alertController addAction:takePhotoAction];
 
+    alertController.modalPresentationStyle = UIModalPresentationPopover;
     UIPopoverPresentationController *popover = alertController.popoverPresentationController;
-    if (popover) {
-        popover.sourceView = sender;
-        popover.sourceRect = sender.bounds;
-        popover.permittedArrowDirections = UIPopoverArrowDirectionAny;
-    }
+    popover.barButtonItem = (UIBarButtonItem *)sender;
 
     [self presentViewController:alertController animated:YES completion:nil];
 }

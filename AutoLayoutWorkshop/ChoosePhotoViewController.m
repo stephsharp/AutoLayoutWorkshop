@@ -9,10 +9,6 @@
 #import "ChoosePhotoViewController.h"
 #import "ProfileViewController.h"
 
-@interface ChoosePhotoViewController ()
-
-@end
-
 @implementation ChoosePhotoViewController
 
 - (IBAction)selectImage:(UITapGestureRecognizer *)sender
