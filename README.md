@@ -3,6 +3,9 @@
 ##Instructions
 
 1. Fork the repo and checkout the **starter-project branch**
+
+        git clone -b starter-project git@github.com:stephsharp/AutoLayoutWorkshop.git
+
 2. Open Main.storyboard where you'll find 3 views that need laying out (Profile, Choose Recent Photo and Take Photo).
 3. Add constraints to each of these views to match the criteria and screenshots below.
 
