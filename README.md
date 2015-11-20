@@ -1,5 +1,10 @@
 #Auto Layout Workshop
 
+I created this workshop for our iOS team to get us thinking and talking about how we can build better, more flexible and maintainable layouts in Interface Builder. 
+
+For more information on this workshop and the Auto Layout challenges below, see my [blog post](http://stephsharp.me/auto-layout-workshop/).
+
+
 ##Instructions
 
 1. Fork the repo and checkout the **starter-project branch**
