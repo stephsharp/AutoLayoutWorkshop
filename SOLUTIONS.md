@@ -17,7 +17,7 @@ Put the 3 labels inside a container view. Add an Equal Widths constraint between
 3. Constrain the top of the label container to the top of its container view (from step 1) with constant >= 0 and required priority (1000)
 4. Constrain the bottom of the label container to the bottom of its container view with constant >=0 and required priority (1000)
 5. Constrain the image view to the top of its container view with required priority (1000)
-6. Constrain the image view to the bottom of its container view with a low priority (250)
+6. Constrain the image view to the bottom of its container view with a high priority (750)
 
 **The social icons should be evenly spaced across the full width of the screen.**  
 Add spacer views between each button with Equal Widths constraints. (I'm looking forward to iOS 9's UIStackView and UILayoutGuide!)
@@ -43,6 +43,7 @@ Select the 12 images and then use the Pin tool to add all 53 constraints and upd
 **The camera guidelines should always be square and centred.**
 
 1. Create an aspect ratio constraint on the image view with multiplier 1:1
-2. Align camera guidelines vertically and horizontally in superview
-3. Constrain leading and trailing space to superview with constant >= 10 and required priority (1000)
-4. Constrain top and bottom space to superview with constant = 10 and high priority (750)
+2. Embed the camera guidelines in a container view (Editor > Embed In > View) and constrain the container view to its nearest neighbor on all sides
+3. Align camera guidelines vertically and horizontally in superview
+4. Constrain leading and trailing space to superview with constant >= 10 and required priority (1000)
+5. Constrain top and bottom space to superview with constant = 10 and high priority (750)
