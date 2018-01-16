@@ -1,11 +1,11 @@
-#Auto Layout Workshop
+# Auto Layout Workshop
 
 I created this workshop for our iOS team to get us thinking and talking about how we can build better, more flexible and maintainable layouts in Interface Builder. 
 
 For more information on this workshop and the Auto Layout challenges below, see my [blog post](http://stephsharp.me/auto-layout-workshop/).
 
 
-##Instructions
+## Instructions
 
 1. Fork the repo and checkout the **starter-project branch**
 
@@ -14,7 +14,7 @@ For more information on this workshop and the Auto Layout challenges below, see 
 2. Open Main.storyboard where you'll find 3 views that need laying out (Profile, Choose Recent Photo and Take Photo).
 3. Add constraints to each of these views to match the criteria and screenshots below.
 
-##Profile
+## Profile
 
 - The profile picture should always be square.
 - The profile picture should take up 1/3 of the screen width. Name, location and blurb should fill the remaining 2/3 of the screen width.
@@ -32,7 +32,7 @@ For more information on this workshop and the Auto Layout challenges below, see 
 
 ![Choose Recent Photo screenshot](Screenshots/ChoosePhoto.png?raw=true)
 
-##Take Photo
+## Take Photo
 
 - The bottom tool bar should have a height constraint equal to 90.
 - The camera guidelines should always be square and centred. On short screens (e.g. iPhone 4S) the guidelines have more space on the left and right sides, on tall screens (e.g. iPhone 6 Plus) there is more space above and below the guidelines.
